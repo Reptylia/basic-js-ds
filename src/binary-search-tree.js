@@ -85,16 +85,20 @@ module.exports = class BinarySearchTree {
   }
 
   min() {
-    if (!this.root) {
-      return;
+    let actual = this.poppy;
+    while(actual.left) {
+      actual = actual.left;
     }
-    let node = this.poppy;
-    return node.data;
+    return actual.data;
     // remove line with error and write your code here
   }
 
   max() {
-    
+    let actual = this.poppy;
+    while(actual.right) {
+      actual = actual.right;
+    }
+    return actual.data;
     // remove line with error and write your code here
   }
 
